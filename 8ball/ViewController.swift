@@ -9,18 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
+    //connects with the view controller ( app )
     @IBOutlet weak var labelOutput: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //set's the label output to null
         labelOutput.text = ""
 
     }
-    
+    // gives us a function
+    //when the person clicks the button this code will be activated
     @IBAction func findOutTheAnswer(_ sender: Any) {
+        //get's a random number between 0<21
         let number = Int.random(in: 0 ..< 21)
+        //if the number is 1 it will give the following output
         if number == 1 {
             labelOutput.text = " It is certain. "
+            
             
         } else if number == 2 {
              labelOutput.text = " It is decidedly so. "
